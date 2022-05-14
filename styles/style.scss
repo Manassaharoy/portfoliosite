@@ -1,0 +1,136 @@
+*{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+:root{
+	--text-primary: #000000;
+	--text-secondary: #EDE6DB;
+	--bg-dark: #1A3C40;
+	--bg-mid: #1D5C63;
+	--bg-light: #417D7A;
+	--bg-lighter: #EDE6DB;
+	--font-heading: 'Press Start 2P', cursive;
+	--font-body: 'Gruppo', cursive;
+}
+
+
+@mixin bodyStyle {
+	font-family: var(--font-body);
+	color: var(--text-primary);
+}
+
+@mixin headingStyle {
+	font-family: var(--font-heading);
+	color: var(--text-secondary);
+}
+@mixin resetATags {
+		@include headingStyle;
+		text-decoration: none;
+}
+
+.heading{
+	@include headingStyle;
+}
+.body {
+	@include bodyStyle;
+}
+
+body{
+	margin: 0 7rem;
+	background-color: var(--bg-dark);
+	text-transform: uppercase;
+
+	.navbar {
+		display: block;
+		margin: 3rem 0rem;
+		font-size: 1.7rem;
+		padding: 1rem 0rem;
+	}
+	
+	.navbar ul{
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+	.navbar ul li{
+		list-style: none;
+	}
+	.navbar ul li a{
+		@include resetATags;
+	}
+	.aboutSection{
+		display: flex;
+		gap: 3rem;
+
+		.abouHeading{
+			.hiphoto{
+				display: flex;
+				align-items: center;
+				justify-content: center;
+			}
+			
+	
+			.welcome{
+				@include headingStyle;
+				padding: 3rem;
+				border: 7px dashed var(--bg-mid);
+				border-radius: 1rem;
+				background-color: var(--bg-light);
+				color: #000;
+				
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+				h1{
+					padding: 2.5rem 0rem;
+				}
+			}
+		}
+
+		.aboutme{
+			@include bodyStyle;
+			flex: 1;
+			padding: 3rem;
+			border: 7px solid var(--bg-mid);
+			// border-radius: 1rem;
+			background-color: var(--bg-light);
+			color: #000;
+			h1{
+				@include headingStyle;
+				text-align: center;
+			}
+			h5{
+				text-align: center;
+				color: var(--bg-lighter);
+				font-weight: 800;
+				letter-spacing: 0.08rem;
+			}
+			p{
+				font-weight: 800;
+				letter-spacing: 0.05rem;
+				font-size: 1.3rem;
+				line-height: 2.3rem;
+				margin-top: 2rem;
+
+			}
+			.aboutBtn{
+				margin-top: 3rem;
+				display: flex;
+				justify-content: space-evenly;
+				.btn{
+					color: var(--bg-lighter);
+					font-size: 1.5rem;
+					background-color: var(--bg-mid);
+					border-radius: 1rem;
+					align-items: center;
+				}
+			}
+		}
+	
+	
+	}
+}
+
+
