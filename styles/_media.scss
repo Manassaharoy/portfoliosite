@@ -1,0 +1,1293 @@
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+
+    body{
+        margin: 1rem;
+
+	// .navbarSection{
+	// 	display: flex;
+	// 	flex-direction: column;
+    //     align-items: center;
+	// 	.navbarMenuSection {
+	// 	display: flex;
+	// 	flex-direction: column;
+    //         a{	
+    //         padding: 2rem 0;
+    //         }
+    //     }
+		
+	// }
+
+    .navbar{
+        @include headingStyle;
+        .navbar-toggler{
+            background-color: var(--bg-lighter);
+    }
+    }
+    .navbar-fixed-top.scrolled {
+		background-color: var(--bg-dark) !important;
+		transition: background-color .3s linear;
+	  }
+
+
+
+    .aboutSection{
+		display: flex;
+        // flex-direction: column;
+        align-items: center;
+		justify-content: center;
+        flex-wrap: wrap;
+        
+		.abouHeading{
+            
+
+            .welcome{
+                
+                h1{
+					text-align: center;
+                    
+				}
+                
+			}
+            
+
+
+        }
+		.aboutme{
+            h2,h3,h4,h5,h6,p{
+                font-size: 1rem;
+
+                }
+                .aboutBtn{
+                    display: flex;
+                    justify-content: space-evenly;
+                    flex-wrap: wrap;
+                    .btn{
+                        margin-bottom: .5rem;
+                    }
+                }
+            
+        }
+	}
+
+    .skillSection{
+        .col-5{
+            max-width: none;
+        .skillOrbit {
+            position: relative;
+            margin-bottom: 4rem;
+            overflow: hidden;
+        }}
+        .row{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            .col-7{
+            display: flex;
+            flex-wrap: wrap;
+            max-width: 100%;
+
+            .skillList{
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            padding: 1rem 1rem 10rem 1rem;
+
+            .row{
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                flex-wrap: wrap;
+                align-items: flex-start;
+                
+            }
+            
+            }
+            }
+        }
+    }
+
+    .projectSection{
+        margin: 0rem;
+        display: flex;
+        align-items: center;
+        flex-wrap: nowrap;
+        .card-deck {
+            display: flex;
+            flex-direction: column;
+            align-items: stretch;
+            margin: 0;
+            .card{
+                margin-bottom: 1rem;
+            }
+        }
+    }
+
+
+    .contactSection{
+        display: flex;
+            flex-direction: column;
+            flex-wrap: nowrap;
+        .socialConnectColumn{
+
+            display: flex;
+            flex-direction: column;
+            flex-wrap: nowrap;
+            .socialConnect{
+                .socialBtns{
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: center;
+                    a{
+
+                        margin-right: 1rem;
+                    }
+                }
+            }
+
+            .peekimage{
+                display: none;
+            }
+            .contactDetails{
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                align-items: center;
+                flex-wrap: wrap;
+                padding: 1.5rem;
+            }
+        }
+    }
+
+
+    }
+    .footerSection h5 {
+        text-align: center;
+    }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+
+@media only screen and (min-width: 600px) {
+
+
+    body{
+        margin: 1rem;
+
+
+    .navbar{
+        @include headingStyle;
+        .navbar-toggler{
+            background-color: var(--bg-lighter);
+    }
+    }
+    .navbar-fixed-top.scrolled {
+		background-color: var(--bg-dark) !important;
+		transition: background-color .3s linear;
+	  }
+
+
+
+    .aboutSection{
+		display: flex;
+        // flex-direction: column;
+        align-items: center;
+		justify-content: center;
+        flex-wrap: wrap;
+        
+		.abouHeading{
+            
+
+            .welcome{
+                
+                h1{
+					text-align: center;
+                    
+				}
+                
+			}
+            
+
+
+        }
+		.aboutme{
+            h2,h3,h4,h5,h6,p{
+                font-size: 1rem;
+
+                }
+                .aboutBtn{
+                    display: flex;
+                    justify-content: space-evenly;
+                    flex-wrap: wrap;
+                    .btn{
+                        margin-bottom: .5rem;
+                    }
+                }
+            
+        }
+	}
+
+    .skillSection{
+        .col-5{
+            max-width: none;
+        .skillOrbit {
+            position: relative;
+            
+            overflow: hidden;
+        }}
+        .row{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            .col-7{
+            display: flex;
+            flex-wrap: wrap;
+            max-width: 100%;
+
+            .skillList{
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            padding: 1rem 1rem 10rem 1rem;
+
+            .row{
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                flex-wrap: wrap;
+                align-items: flex-start;
+                
+            }
+            
+            }
+            }
+        }
+    }
+
+    .projectSection{
+        margin: 0rem;
+        display: flex;
+        align-items: center;
+        flex-wrap: nowrap;
+        .card-deck {
+            display: flex;
+            flex-direction: column;
+            align-items: stretch;
+            margin: 0;
+            .card{
+                margin-bottom: 1rem;
+            }
+        }
+    }
+
+
+    .contactSection{
+        display: flex;
+            flex-direction: column;
+            flex-wrap: nowrap;
+        .socialConnectColumn{
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            flex-wrap: nowrap;
+            .socialConnect{
+                .socialBtns{
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: center;
+                    a{
+
+                        margin-right: 1rem;
+                    }
+                }
+            }
+
+            .peekimage{
+                position: absolute;
+                right: 13.9rem;
+                top: 5rem;
+            }
+            .contactDetails{
+                display: flex;
+                flex-wrap: wrap;
+                padding: 3rem;
+            }
+        }
+    }
+
+
+    }
+    .footerSection h5 {
+        text-align: center;
+    }
+
+}
+
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+
+
+    body{
+        margin: 1rem;
+
+
+    .navbar{
+        @include headingStyle;
+        .navbar-toggler{
+            background-color: var(--bg-lighter);
+    }
+    }
+    .navbar-fixed-top.scrolled {
+		background-color: var(--bg-dark) !important;
+		transition: background-color .3s linear;
+	  }
+
+
+
+    .aboutSection{
+		display: flex;
+        // flex-direction: column;
+        align-items: center;
+		justify-content: center;
+        flex-wrap: wrap;
+        
+		.abouHeading{
+            
+
+            .welcome{
+                
+                h1{
+					text-align: center;
+                    
+				}
+                
+			}
+            
+
+
+        }
+		.aboutme{
+            h2,h3,h4,h5,h6,p{
+                font-size: 1rem;
+
+                }
+                .aboutBtn{
+                    display: flex;
+                    justify-content: space-evenly;
+                    flex-wrap: wrap;
+                    .btn{
+                        margin-bottom: .5rem;
+                    }
+                }
+            
+        }
+	}
+
+    .skillSection{
+        .col-5{
+            max-width: none;
+        .skillOrbit {
+            position: relative;
+            margin-bottom: 4rem;
+            overflow: hidden;
+        }}
+        .row{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            .col-7{
+            display: flex;
+            flex-wrap: wrap;
+            max-width: 100%;
+            justify-content: center;    width: fit-content;
+            .skillList{
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            
+            padding: 1rem 1rem 10rem 1rem;
+
+            .row{
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                flex-wrap: wrap;
+                align-items: flex-start;
+                
+            }
+            
+            }
+            }
+        }
+    }
+
+    .projectSection{
+        margin: 0rem;
+        display: flex;
+        align-items: center;
+        flex-wrap: nowrap;
+        .card-deck {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            .card{
+                margin-bottom: 1rem;
+            }
+        }
+    }
+
+
+    .contactSection{
+        display: flex;
+            flex-direction: column;
+            flex-wrap: nowrap;
+        .socialConnectColumn{
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            flex-wrap: nowrap;
+            .socialConnect{
+                .socialBtns{
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: center;
+                    a{
+
+                        margin-right: 1rem;
+                    }
+                }
+            }
+
+            .peekimage{
+                position: absolute;
+                right: 10.9rem;
+                top: 1rem;
+            }
+            .contactDetails{
+                display: flex;
+                flex-wrap: wrap;
+                padding: 3rem;
+            }
+        }
+    }
+
+
+    }
+
+    .footerSection h5 {
+        text-align: center;
+    }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+
+    body{
+        margin: 1rem;
+    .navbar{
+        @include headingStyle;
+		.collapse{
+			.navbar-nav{
+				flex: 1;
+				justify-content: space-around;
+				width: 100%;
+				.nav-item{
+					a{
+						font-size: 1.5rem;
+						color: var(--bg-lighter);
+		
+					}
+				}
+			}
+		}
+
+        .navbar-toggler{
+            background-color: var(--bg-lighter);
+    }
+    }
+    .navbar-fixed-top.scrolled {
+		background-color: var(--bg-dark) !important;
+		transition: background-color .3s linear;
+	  }
+
+
+
+    .aboutSection{
+		display: flex;
+        // flex-direction: column;
+        align-items: center;
+		justify-content: center;
+        flex-wrap: wrap;
+        
+		.abouHeading{
+            
+
+            .welcome{
+                
+                h1{
+					text-align: center;
+                    
+				}
+                
+			}
+            
+
+
+        }
+		.aboutme{
+            h2,h3,h4,h5,h6,p{
+                font-size: 1rem;
+
+                }
+                .aboutBtn{
+                    display: flex;
+                    justify-content: space-evenly;
+                    flex-wrap: wrap;
+                    .btn{
+                        margin-bottom: .5rem;
+                    }
+                }
+            
+        }
+	}
+
+    .skillSection{
+        .col-5{
+            max-width: none;
+        .skillOrbit {
+            position: relative;
+            
+            overflow: hidden;
+        }}
+        .row{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            .col-7{
+            display: flex;
+            flex-wrap: wrap;
+            max-width: 100%;
+            justify-content: center;    width: fit-content;
+            .skillList{
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            
+            padding: 1rem 1rem 10rem 1rem;
+
+            .row{
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                flex-wrap: wrap;
+                align-items: flex-start;
+                
+            }
+            
+            }
+            }
+        }
+    }
+
+    .projectSection{
+        margin: 0rem;
+        display: flex;
+        align-items: center;
+        flex-wrap: nowrap;
+        .card-deck {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            .card{
+                margin-bottom: 1rem;
+            }
+        }
+    }
+
+
+    .contactSection{
+        display: flex;
+            flex-direction: column;
+            flex-wrap: nowrap;
+        .socialConnectColumn{
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            flex-wrap: nowrap;
+            .socialConnect{
+                .socialBtns{
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: center;
+                    a{
+
+                        margin-right: 1rem;
+                    }
+                }
+            }
+
+            .peekimage{
+                position: absolute;
+                right: 10.9rem;
+                top: 1rem;
+            }
+            .contactDetails{
+                display: flex;
+                flex-wrap: wrap;
+                padding: 3rem;
+            }
+        }
+    }
+
+
+    }
+    .footerSection h5 {
+        text-align: center;
+    }
+}
+
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+
+    body{
+        margin: 1rem;
+    .navbar{
+        @include headingStyle;
+		.collapse{
+			.navbar-nav{
+				flex: 1;
+				justify-content: space-around;
+				width: 100%;
+				.nav-item{
+					a{
+						font-size: 1.5rem;
+						color: var(--bg-lighter);
+					}
+				}
+			}
+		}
+        .navbar-toggler{
+            background-color: var(--bg-lighter);
+    }
+    }
+    .navbar-fixed-top.scrolled {
+		background-color: var(--bg-dark) !important;
+		transition: background-color .3s linear;
+	  }
+    .aboutSection{
+		display: flex;
+        align-items: center;
+		justify-content: center;
+        flex-wrap: wrap;
+		.abouHeading{
+            .welcome{
+                h1{
+					text-align: center;
+				}
+			}
+        }
+		.aboutme{
+            h2,h3,h4,h5,h6,p{
+                font-size: 1rem;
+                }
+                .aboutBtn{
+                    display: flex;
+                    justify-content: space-evenly;
+                    flex-wrap: wrap;
+                    .btn{
+                        margin-bottom: .5rem;
+                    }
+                }
+        }
+	}
+    .skillSection{
+        .col-5{
+            max-width: none;
+        .skillOrbit {
+            position: relative;
+            overflow: hidden;
+            .orbit{
+                min-height: 100vh;
+            }
+        }}
+        .row{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            .col-7{
+            display: flex;
+            flex-wrap: wrap;
+            max-width: 100%;
+            justify-content: center;    width: fit-content;
+            .skillList{
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 1rem 1rem 1rem 1rem;
+            .row{
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                flex-wrap: wrap;
+                align-items: flex-start;
+            }
+            }
+            }
+        }
+    }
+    .projectSection{
+        margin: 0rem;
+        display: flex;
+        align-items: center;
+        flex-wrap: nowrap;
+        .card-deck {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            align-items: stretch;
+            .card{
+                margin-bottom: 1rem;
+            }
+        }
+    }
+    .contactSection{
+            margin: 0 2rem;
+        .socialConnectColumn{
+            
+            display: flex;
+            flex-direction: row;
+            position: relative;
+            justify-content: space-between;
+            .socialConnect{
+                .socialBtns{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    a{
+                        margin-right: 1rem;
+                    }
+                }
+            }
+            .peekimage{
+                position: absolute;
+                left: 4rem;
+                top: 0rem;
+                img{width:300px}
+            }
+            .contactSection{
+                display: flex;
+                
+                .socialConnectColumn{
+                    align-items: center;
+                    .socialConnect{
+                        .socialBtns{
+                            display: flex;
+                            flex-direction: column;
+                        }
+                    }
+            }
+            }
+        }
+    }
+    }
+    .footerSection h5 {
+        text-align: center;
+    }
+}
+@media only screen and (min-width: 1366px) {
+
+    body{
+        margin: 1rem;
+    .navbar{
+        @include headingStyle;
+		.collapse{
+			.navbar-nav{
+				flex: 1;
+				justify-content: space-around;
+				width: 100%;
+				.nav-item{
+					a{
+						font-size: 1.5rem;
+						color: var(--bg-lighter);
+					}
+				}
+			}
+		}
+        .navbar-toggler{
+            background-color: var(--bg-lighter);
+    }
+    }
+    .navbar-fixed-top.scrolled {
+		background-color: var(--bg-dark) !important;
+		transition: background-color .3s linear;
+	  }
+    .aboutSection{
+		display: flex;
+        align-items: center;
+		justify-content: center;
+        flex-wrap: wrap;
+		.abouHeading{
+            .welcome{
+                h1{
+					text-align: center;
+				}
+			}
+        }
+		.aboutme{
+            h2,h3,h4,h5,h6,p{
+                font-size: 1rem;
+                }
+                .aboutBtn{
+                    display: flex;
+                    justify-content: space-evenly;
+                    flex-wrap: wrap;
+                    .btn{
+                        margin-bottom: .5rem;
+                    }
+                }
+        }
+	}
+    .skillSection{
+        .col-5{
+            max-width: none;
+        .skillOrbit {
+            position: relative;
+            overflow: hidden;
+            .orbit{
+                min-height: 50vh;
+            }
+        }}
+        .row{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            .col-7{
+            display: flex;
+            flex-wrap: wrap;
+            max-width: 100%;
+            justify-content: center;    width: fit-content;
+            .skillList{
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 1rem 1rem 1rem 1rem;
+            position: relative;
+            .row{
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                flex-wrap: wrap;
+                align-items: flex-start;
+            }
+            img{
+                position: absolute;
+                right: 0;
+                bottom: 0;
+            }
+            }
+            }
+        }
+    }
+    .projectSection{
+        margin-bottom: 5rem;
+        display: flex;
+        align-items: center;
+        flex-wrap: nowrap;
+        .card-deck {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            align-items: stretch;
+            .card{
+                margin-bottom: 1rem;
+            }
+        }
+    }
+    .contactSection{
+            margin: 2rem;
+        .socialConnectColumn{
+            
+            display: flex;
+            flex-direction: row;
+            position: relative;
+            justify-content: space-between;
+            .socialConnect{
+                .socialBtns{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    a{
+                        margin-right: 1rem;
+                    }
+                }
+            }
+            .peekimage{
+                position: absolute;
+                left: 7.2rem;
+                top: 0rem;
+                img{width:300px}
+            }
+            .contactSection{
+                display: flex;
+                
+                .socialConnectColumn{
+                    align-items: center;
+                    .socialConnect{
+                        .socialBtns{
+                            display: flex;
+                            flex-direction: column;
+                        }
+                    }
+            }
+            }
+        }
+    }
+    }
+    .footerSection h5 {
+        text-align: center;
+    }
+}
+
+@media only screen and (min-width: 1440px) {
+
+
+    body{
+        margin: 1rem;
+    .navbar{
+        @include headingStyle;
+		.collapse{
+			.navbar-nav{
+				flex: 1;
+				justify-content: space-around;
+				width: 100%;
+				.nav-item{
+					a{
+						font-size: 1.5rem;
+						color: var(--bg-lighter);
+					}
+				}
+			}
+		}
+        .navbar-toggler{
+            background-color: var(--bg-lighter);
+    }
+    }
+    .navbar-fixed-top.scrolled {
+		background-color: var(--bg-dark) !important;
+		transition: background-color .3s linear;
+	  }
+    .aboutSection{
+		display: flex;
+        align-items: center;
+		justify-content: center;
+        flex-wrap: wrap;
+		.abouHeading{
+            .welcome{
+                h1{
+					text-align: center;
+				}
+			}
+        }
+		.aboutme{
+            h2,h3,h4,h5,h6,p{
+                font-size: 1rem;
+                }
+                .aboutBtn{
+                    display: flex;
+                    justify-content: space-evenly;
+                    flex-wrap: wrap;
+                    .btn{
+                        margin-bottom: .5rem;
+                    }
+                }
+        }
+	}
+    .skillSection{
+        margin-top: 2rem;
+        .col-5{
+            max-width: none;
+        .skillOrbit {
+            position: relative;
+            overflow: hidden;
+            .orbit{
+                min-height: 100vh;
+            }
+        }}
+        .row{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            .col-7{
+            display: flex;
+            flex-wrap: wrap;
+            max-width: 100%;
+            justify-content: center;    width: fit-content;
+            .skillList{
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 1rem 1rem 1rem 1rem;
+            .row{
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                flex-wrap: wrap;
+                align-items: flex-start;
+            }
+            }
+            }
+        }
+    }
+    .projectSection{
+        margin: 0rem;
+        display: flex;
+        align-items: center;
+        flex-wrap: nowrap;
+        .card-deck {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            align-items: stretch;
+            .card{
+                margin-bottom: 1rem;
+            }
+        }
+    }
+    .contactSection{
+        margin: 0 2rem;
+            
+        .socialConnectColumn{
+            
+            display: flex;
+            flex-direction: row;
+            position: relative;
+            justify-content: space-between;
+            .socialConnect{
+                .socialBtns{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    a{
+                        margin-right: 1rem;
+                    }
+                }
+            }
+            .peekimage{
+                
+                position: absolute;
+                left: 9rem;
+                top: 0rem;
+                img {
+                    width: 300px;
+                }
+            }
+            .contactSection{
+                display: flex;
+                
+                .socialConnectColumn{
+                    align-items: center;
+                    .socialConnect{
+                        .socialBtns{
+                            display: flex;
+                            flex-direction: column;
+                        }
+                    }
+            }
+            }
+        }
+    }
+    }
+    .footerSection h5 {
+        text-align: center;
+    }
+
+}
+@media only screen and (min-width: 1920px) {
+
+
+    body{
+        margin: 5rem;
+    .navbar{
+        @include headingStyle;
+		.collapse{
+			.navbar-nav{
+				flex: 1;
+				justify-content: space-around;
+				width: 100%;
+				.nav-item{
+					a{
+						font-size: 1.5rem;
+						color: var(--bg-lighter);
+					}
+				}
+			}
+		}
+        .navbar-toggler{
+            background-color: var(--bg-lighter);
+    }
+    }
+    .navbar-fixed-top.scrolled {
+		background-color: var(--bg-dark) !important;
+		transition: background-color .3s linear;
+	  }
+    .aboutSection{
+		display: flex;
+        align-items: stretch;
+		justify-content: center;
+        flex-wrap: wrap;
+		.abouHeading{
+            .welcome{
+                h1{
+					text-align: center;
+				}
+			}
+        }
+		.aboutme{
+            h2,h3,h4,h5,h6,p{
+                font-size: 1.5rem;
+                }
+                .aboutBtn{
+                    display: flex;
+                    justify-content: space-evenly;
+                    flex-wrap: wrap;
+                    .btn{
+                        margin-bottom: .5rem;
+                    }
+                }
+        }
+	}
+    .skillSection{
+        
+        
+        .col-5{
+            max-width: none;
+        .skillOrbit {
+            position: relative;
+            overflow: hidden;
+            $orbitItemSize: 2.8rem;
+            .orbit{
+                min-height: 80vh;
+            }
+            .orbit-icon {
+                
+                font-size: 1em;
+                border-radius: 50%;
+                
+              }
+              .orbit-wrap {
+                height: 1.5rem;
+                font-size: 1.5rem;
+            }
+        }}
+        .row{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            .col-7{
+            display: flex;
+            flex-direction: column;
+            max-width: 100%;
+            justify-content: center;    
+            width: fit-content;
+            .skillList{
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 1rem;
+            h1{
+                font-size: 2.5rem;
+    
+            }
+            p{
+                font-size: 1.5rem;
+
+            }
+            .row{
+                
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                flex-wrap: wrap;
+                align-items: flex-start;
+            }
+            }
+            }
+        }
+    }
+    .projectSection{
+        margin: 0rem;
+        display: flex;
+        align-items: center;
+        flex-wrap: nowrap;
+        .card-deck {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            align-items: stretch;
+            .card{
+                margin-bottom: 1rem;
+            }
+        }
+    }
+    .contactSection{
+        margin: 5rem 2rem;
+            
+        .socialConnectColumn{
+            
+            display: flex;
+            flex-direction: row;
+            position: relative;
+            justify-content: space-between;
+            .socialConnect{
+                .socialBtns{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    a{
+                        margin-right: 1rem;
+                    }
+                }
+            }
+            .peekimage{
+                
+                position: absolute;
+                left: 16rem;
+                top: 0rem;
+                img {
+                    width: 300px;
+                }
+            }
+            .contactSection{
+                display: flex;
+                
+                .socialConnectColumn{
+                    align-items: center;
+                    .socialConnect{
+                        .socialBtns{
+                            display: flex;
+                            flex-direction: column;
+                        }
+                    }
+                    .contactDetails{
+                        justify-content: center;
+                    }
+            }
+            }
+        }
+    }
+    }
+    .footerSection h5 {
+        text-align: center;
+    }
+
+}

@@ -16,6 +16,24 @@
   --font-body: 'Gruppo', cursive;
 }
 
+[data-theme="dark"] {
+  --text-primary: #EEEEEE;
+  --text-secondary: #EEEEEE;
+  --bg-dark: #000000;
+  --bg-mid: #222831;
+  --bg-light: #393E46;
+  --bg-lighter: #EEEEEE;
+}
+
+.clay-theme {
+  --text-primary: #171717;
+  --text-secondary: #EEEEEE;
+  --bg-dark: #171717;
+  --bg-mid: #00ADB5;
+  --bg-light: #393E46;
+  --bg-lighter: #EEEEEE;
+}
+
 .heading {
   font-family: var(--font-heading);
   color: var(--text-secondary);
@@ -32,32 +50,51 @@ body {
 }
 
 body .navbar {
-  display: block;
-  margin: 3rem 0rem;
-  font-size: 1.7rem;
-  padding: 1rem 0rem;
-}
-
-body .navbar ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-
-body .navbar ul li {
-  list-style: none;
-}
-
-body .navbar ul li a {
   font-family: var(--font-heading);
   color: var(--text-secondary);
-  text-decoration: none;
+}
+
+body .navbar .collapse .navbar-nav {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  width: 100%;
+}
+
+body .navbar .collapse .navbar-nav .nav-item a {
+  font-size: 2rem;
+  color: var(--bg-lighter);
+}
+
+body .navbar .themeSwitcher input {
+  margin-left: 3rem;
+}
+
+body .navbar .themeSwitcher .toggle-button {
+  -webkit-appearance: none;
+  outline: none;
+  width: 50px;
+  height: 50px;
+  border-radius: 30px;
+  position: relative;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  background: url("https://raw.githubusercontent.com/RuchiVS/image-upload/main/moon.png") no-repeat center var(--bg-light);
+  background-size: 30px;
+  cursor: pointer;
+}
+
+body .navbar .themeSwitcher .toggle-button:checked {
+  background: url("https://raw.githubusercontent.com/RuchiVS/image-upload/main/sun.png") no-repeat center var(--bg-light);
+  background-size: 30px;
+}
+
+body .navbar-fixed-top.scrolled {
+  background-color: var(--bg-dark) !important;
+  -webkit-transition: background-color .3s linear;
+  transition: background-color .3s linear;
 }
 
 body .aboutSection {
@@ -65,7 +102,7 @@ body .aboutSection {
   display: -ms-flexbox;
   display: flex;
   gap: 3rem;
-  margin: 6rem 0rem;
+  margin: 2rem 0rem 0rem 0rem;
 }
 
 body .aboutSection .abouHeading .hiphoto {
@@ -99,8 +136,6 @@ body .aboutSection .abouHeading .hiphoto .flip-card-inner {
   transition: transform 0.6s, -webkit-transform 0.6s;
   -webkit-transform-style: preserve-3d;
           transform-style: preserve-3d;
-  -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
 
 body .aboutSection .abouHeading .hiphoto .flip-card:hover .flip-card-inner {
@@ -117,17 +152,20 @@ body .aboutSection .abouHeading .hiphoto .flip-card-front, body .aboutSection .a
 }
 
 body .aboutSection .abouHeading .hiphoto .flip-card-front {
-  background-color: #bbb;
+  background-color: var(--bg-dark);
   color: black;
 }
 
 body .aboutSection .abouHeading .hiphoto .flip-card-back {
-  background-color: #2980b9;
-  color: white;
   -webkit-transform: rotateY(180deg);
           transform: rotateY(180deg);
-  -webkit-filter: grayscale(100%);
-          filter: grayscale(100%);
+  -webkit-filter: grayscale(80%);
+          filter: grayscale(80%);
+}
+
+body .aboutSection .abouHeading .hiphoto .flip-card-back img {
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 
 body .aboutSection .abouHeading .welcome {
@@ -219,7 +257,6 @@ body .aboutSection .aboutme .aboutBtn .btn:hover {
 }
 
 body .skillSection {
-  margin: 6rem 0rem;
   text-transform: uppercase;
 }
 
@@ -253,8 +290,8 @@ body .skillSection .skillOrbit .orbit-icon {
   line-height: 2.2rem;
   font-size: 1.5em;
   border-radius: 50%;
-  background: #ccc;
-  color: #fff;
+  background: var(--bg-light);
+  color: var(--text-secondary);
   text-align: center;
   display: block;
 }
@@ -647,5 +684,1968 @@ body .skillSection .skillList img {
   position: absolute;
   bottom: 7px;
   right: 22px;
+}
+
+body .projectSection {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+}
+
+body .projectSection h1 {
+  font-family: var(--font-heading);
+  color: var(--text-secondary);
+  text-align: center;
+  margin: 5rem 0rem;
+}
+
+body .projectSection .card-deck {
+  font-family: var(--font-body);
+  color: var(--text-primary);
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+body .projectSection .card-deck .card {
+  background-color: var(--bg-light);
+  border-radius: 0rem 0rem 2rem 2rem;
+}
+
+body .projectSection .card-deck .card img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: top;
+     object-position: top;
+  height: 270px;
+  -webkit-transition: 2s all ease;
+  transition: 2s all ease;
+}
+
+body .projectSection .card-deck .card img:hover {
+  -o-object-position: bottom;
+     object-position: bottom;
+}
+
+body .projectSection .card-deck .card .card-body {
+  color: var(--text-secondary);
+  padding: 1.25rem 1.25rem 0rem 1.25rem;
+}
+
+body .projectSection .card-deck .card .card-body p .techStack {
+  background-color: var(--bg-dark);
+  border-radius: 1rem;
+  padding: .4rem;
+  margin-right: .5rem;
+}
+
+body .projectSection .card-deck .card .card-body .projectLinks {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+body .projectSection .card-deck .card .card-body .projectLinks p a {
+  font-family: var(--font-heading);
+  color: var(--text-secondary);
+  text-decoration: none;
+}
+
+body .projectSection .card-deck .card .card-body .projectLinks p a i {
+  font-size: 2rem;
+  margin-right: 1rem;
+  margin-top: .5rem;
+}
+
+body .projectSection .card-deck .card .card-body .projectLinks .btn-details {
+  color: var(--text-secondary);
+  background-color: var(--bg-dark);
+  border: none;
+  border-radius: 1rem;
+  padding: .6rem;
+}
+
+body .projectSection .seeMoreWorks {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+body .projectSection .seeMoreWorks .btn {
+  font-family: var(--font-body);
+  color: var(--text-primary);
+  margin-top: 2rem;
+  width: 20rem;
+  color: var(--bg-lighter);
+  border: none;
+  font-size: 1.5rem;
+  background-color: var(--bg-mid);
+  border-radius: 1rem;
+  -webkit-transition: .2s ease-in-out;
+  transition: .2s ease-in-out;
+}
+
+body .projectSection .seeMoreWorks .btn:hover {
+  background-color: var(--bg-lighter);
+  color: var(--bg-dark);
+}
+
+body .contactSection {
+  font-family: var(--font-body);
+  color: var(--text-primary);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 5rem 0;
+}
+
+body .contactSection .socialConnectColumn {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body .contactSection .socialConnectColumn .socialConnect .socialBtns {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+body .contactSection .socialConnectColumn .socialConnect .socialBtns i {
+  font-size: 3rem;
+  color: var(--text-secondary);
+  margin: 1rem 0;
+  -webkit-transition: 2s ease-in-out;
+  transition: 2s ease-in-out;
+}
+
+body .contactSection .socialConnectColumn .socialConnect .socialBtns i:hover {
+  color: var(--text-primary);
+}
+
+body .contactSection .socialConnectColumn .col-3 {
+  max-width: 24.2%;
+}
+
+body .contactSection .socialConnectColumn .contactDetails {
+  border: 0.5rem dashed var(--bg-light);
+  border-radius: 2rem;
+  background-color: var(--bg-mid);
+  padding: 5rem;
+  color: var(--bg-lighter);
+}
+
+body .contactSection .socialConnectColumn .contactDetails h1 {
+  font-family: var(--font-heading);
+  color: var(--text-secondary);
+  text-align: center;
+}
+
+body .contactSection .socialConnectColumn .contactDetails h3 span a {
+  color: var(--bg-lighter);
+}
+
+body .contactSection .socialConnectColumn .contactDetails form .row {
+  margin: 1rem 0;
+}
+
+body .contactSection .socialConnectColumn .contactDetails form .row .form-control {
+  background-color: var(--bg-light);
+  border: none;
+  color: var(--text-secondary);
+}
+
+body .contactSection .socialConnectColumn .contactDetails form .row .form-control::-webkit-input-placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: var(--bg-lighter);
+  opacity: 1;
+  /* Firefox */
+}
+
+body .contactSection .socialConnectColumn .contactDetails form .row .form-control:-ms-input-placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: var(--bg-lighter);
+  opacity: 1;
+  /* Firefox */
+}
+
+body .contactSection .socialConnectColumn .contactDetails form .row .form-control::-ms-input-placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: var(--bg-lighter);
+  opacity: 1;
+  /* Firefox */
+}
+
+body .contactSection .socialConnectColumn .contactDetails form .row .form-control::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: var(--bg-lighter);
+  opacity: 1;
+  /* Firefox */
+}
+
+body .contactSection .socialConnectColumn .contactDetails form .row .form-control:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: var(--bg-lighter);
+}
+
+body .contactSection .socialConnectColumn .contactDetails form .row .form-control::-ms-input-placeholder {
+  /* Microsoft Edge */
+  color: var(--bg-lighter);
+}
+
+body .contactSection .socialConnectColumn .contactDetails form .divBtn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+body .contactSection .socialConnectColumn .contactDetails form .divBtn .btn {
+  background-color: var(--bg-lighter);
+  font-size: 1.5rem;
+  width: 15rem;
+}
+
+body .contactSection .socialConnectColumn .contactDetails form .divBtn .btn i {
+  color: var(--bg-dark);
+}
+
+body .footerSection {
+  margin-bottom: 1rem;
+}
+
+body .footerSection h5 {
+  font-family: var(--font-body);
+  color: var(--text-primary);
+  color: var(--text-secondary);
+  font-size: 1.5rem;
+}
+
+body .footerSection h5 .funFact {
+  font-family: var(--font-heading);
+  color: var(--text-secondary);
+  font-size: .8rem;
+  color: var(--text-primary);
+}
+
+body::-webkit-scrollbar {
+  width: .5rem;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: var(--bg-light);
+  border-radius: 1rem;
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  body {
+    margin: 1rem;
+  }
+  body .navbar {
+    font-family: var(--font-heading);
+    color: var(--text-secondary);
+  }
+  body .navbar .navbar-toggler {
+    background-color: var(--bg-lighter);
+  }
+  body .navbar-fixed-top.scrolled {
+    background-color: var(--bg-dark) !important;
+    -webkit-transition: background-color .3s linear;
+    transition: background-color .3s linear;
+  }
+  body .aboutSection {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  body .aboutSection .abouHeading .welcome h1 {
+    text-align: center;
+  }
+  body .aboutSection .aboutme h2, body .aboutSection .aboutme h3, body .aboutSection .aboutme h4, body .aboutSection .aboutme h5, body .aboutSection .aboutme h6, body .aboutSection .aboutme p {
+    font-size: 1rem;
+  }
+  body .aboutSection .aboutme .aboutBtn {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  body .aboutSection .aboutme .aboutBtn .btn {
+    margin-bottom: .5rem;
+  }
+  body .skillSection .col-5 {
+    max-width: none;
+  }
+  body .skillSection .col-5 .skillOrbit {
+    position: relative;
+    margin-bottom: 4rem;
+    overflow: hidden;
+  }
+  body .skillSection .row {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  body .skillSection .row .col-7 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    max-width: 100%;
+  }
+  body .skillSection .row .col-7 .skillList {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding: 1rem 1rem 10rem 1rem;
+  }
+  body .skillSection .row .col-7 .skillList .row {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  body .projectSection {
+    margin: 0rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+  }
+  body .projectSection .card-deck {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: stretch;
+        -ms-flex-align: stretch;
+            align-items: stretch;
+    margin: 0;
+  }
+  body .projectSection .card-deck .card {
+    margin-bottom: 1rem;
+  }
+  body .contactSection {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+  }
+  body .contactSection .socialConnectColumn {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+  }
+  body .contactSection .socialConnectColumn .socialConnect .socialBtns {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  body .contactSection .socialConnectColumn .socialConnect .socialBtns a {
+    margin-right: 1rem;
+  }
+  body .contactSection .socialConnectColumn .peekimage {
+    display: none;
+  }
+  body .contactSection .socialConnectColumn .contactDetails {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    flex-wrap: wrap;
+    padding: 1.5rem;
+  }
+  .footerSection h5 {
+    text-align: center;
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  body {
+    margin: 1rem;
+  }
+  body .navbar {
+    font-family: var(--font-heading);
+    color: var(--text-secondary);
+  }
+  body .navbar .navbar-toggler {
+    background-color: var(--bg-lighter);
+  }
+  body .navbar-fixed-top.scrolled {
+    background-color: var(--bg-dark) !important;
+    -webkit-transition: background-color .3s linear;
+    transition: background-color .3s linear;
+  }
+  body .aboutSection {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  body .aboutSection .abouHeading .welcome h1 {
+    text-align: center;
+  }
+  body .aboutSection .aboutme h2, body .aboutSection .aboutme h3, body .aboutSection .aboutme h4, body .aboutSection .aboutme h5, body .aboutSection .aboutme h6, body .aboutSection .aboutme p {
+    font-size: 1rem;
+  }
+  body .aboutSection .aboutme .aboutBtn {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  body .aboutSection .aboutme .aboutBtn .btn {
+    margin-bottom: .5rem;
+  }
+  body .skillSection .col-5 {
+    max-width: none;
+  }
+  body .skillSection .col-5 .skillOrbit {
+    position: relative;
+    overflow: hidden;
+  }
+  body .skillSection .row {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  body .skillSection .row .col-7 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    max-width: 100%;
+  }
+  body .skillSection .row .col-7 .skillList {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding: 1rem 1rem 10rem 1rem;
+  }
+  body .skillSection .row .col-7 .skillList .row {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  body .projectSection {
+    margin: 0rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+  }
+  body .projectSection .card-deck {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: stretch;
+        -ms-flex-align: stretch;
+            align-items: stretch;
+    margin: 0;
+  }
+  body .projectSection .card-deck .card {
+    margin-bottom: 1rem;
+  }
+  body .contactSection {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+  }
+  body .contactSection .socialConnectColumn {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+  }
+  body .contactSection .socialConnectColumn .socialConnect .socialBtns {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  body .contactSection .socialConnectColumn .socialConnect .socialBtns a {
+    margin-right: 1rem;
+  }
+  body .contactSection .socialConnectColumn .peekimage {
+    position: absolute;
+    right: 13.9rem;
+    top: 5rem;
+  }
+  body .contactSection .socialConnectColumn .contactDetails {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    padding: 3rem;
+  }
+  .footerSection h5 {
+    text-align: center;
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  body {
+    margin: 1rem;
+  }
+  body .navbar {
+    font-family: var(--font-heading);
+    color: var(--text-secondary);
+  }
+  body .navbar .navbar-toggler {
+    background-color: var(--bg-lighter);
+  }
+  body .navbar-fixed-top.scrolled {
+    background-color: var(--bg-dark) !important;
+    -webkit-transition: background-color .3s linear;
+    transition: background-color .3s linear;
+  }
+  body .aboutSection {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  body .aboutSection .abouHeading .welcome h1 {
+    text-align: center;
+  }
+  body .aboutSection .aboutme h2, body .aboutSection .aboutme h3, body .aboutSection .aboutme h4, body .aboutSection .aboutme h5, body .aboutSection .aboutme h6, body .aboutSection .aboutme p {
+    font-size: 1rem;
+  }
+  body .aboutSection .aboutme .aboutBtn {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  body .aboutSection .aboutme .aboutBtn .btn {
+    margin-bottom: .5rem;
+  }
+  body .skillSection .col-5 {
+    max-width: none;
+  }
+  body .skillSection .col-5 .skillOrbit {
+    position: relative;
+    margin-bottom: 4rem;
+    overflow: hidden;
+  }
+  body .skillSection .row {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  body .skillSection .row .col-7 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    max-width: 100%;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+  body .skillSection .row .col-7 .skillList {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding: 1rem 1rem 10rem 1rem;
+  }
+  body .skillSection .row .col-7 .skillList .row {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  body .projectSection {
+    margin: 0rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+  }
+  body .projectSection .card-deck {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+  }
+  body .projectSection .card-deck .card {
+    margin-bottom: 1rem;
+  }
+  body .contactSection {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+  }
+  body .contactSection .socialConnectColumn {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+  }
+  body .contactSection .socialConnectColumn .socialConnect .socialBtns {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  body .contactSection .socialConnectColumn .socialConnect .socialBtns a {
+    margin-right: 1rem;
+  }
+  body .contactSection .socialConnectColumn .peekimage {
+    position: absolute;
+    right: 10.9rem;
+    top: 1rem;
+  }
+  body .contactSection .socialConnectColumn .contactDetails {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    padding: 3rem;
+  }
+  .footerSection h5 {
+    text-align: center;
+  }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  body {
+    margin: 1rem;
+  }
+  body .navbar {
+    font-family: var(--font-heading);
+    color: var(--text-secondary);
+  }
+  body .navbar .collapse .navbar-nav {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    width: 100%;
+  }
+  body .navbar .collapse .navbar-nav .nav-item a {
+    font-size: 1.5rem;
+    color: var(--bg-lighter);
+  }
+  body .navbar .navbar-toggler {
+    background-color: var(--bg-lighter);
+  }
+  body .navbar-fixed-top.scrolled {
+    background-color: var(--bg-dark) !important;
+    -webkit-transition: background-color .3s linear;
+    transition: background-color .3s linear;
+  }
+  body .aboutSection {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  body .aboutSection .abouHeading .welcome h1 {
+    text-align: center;
+  }
+  body .aboutSection .aboutme h2, body .aboutSection .aboutme h3, body .aboutSection .aboutme h4, body .aboutSection .aboutme h5, body .aboutSection .aboutme h6, body .aboutSection .aboutme p {
+    font-size: 1rem;
+  }
+  body .aboutSection .aboutme .aboutBtn {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  body .aboutSection .aboutme .aboutBtn .btn {
+    margin-bottom: .5rem;
+  }
+  body .skillSection .col-5 {
+    max-width: none;
+  }
+  body .skillSection .col-5 .skillOrbit {
+    position: relative;
+    overflow: hidden;
+  }
+  body .skillSection .row {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  body .skillSection .row .col-7 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    max-width: 100%;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+  body .skillSection .row .col-7 .skillList {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding: 1rem 1rem 10rem 1rem;
+  }
+  body .skillSection .row .col-7 .skillList .row {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  body .projectSection {
+    margin: 0rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+  }
+  body .projectSection .card-deck {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+  }
+  body .projectSection .card-deck .card {
+    margin-bottom: 1rem;
+  }
+  body .contactSection {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+  }
+  body .contactSection .socialConnectColumn {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+  }
+  body .contactSection .socialConnectColumn .socialConnect .socialBtns {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  body .contactSection .socialConnectColumn .socialConnect .socialBtns a {
+    margin-right: 1rem;
+  }
+  body .contactSection .socialConnectColumn .peekimage {
+    position: absolute;
+    right: 10.9rem;
+    top: 1rem;
+  }
+  body .contactSection .socialConnectColumn .contactDetails {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    padding: 3rem;
+  }
+  .footerSection h5 {
+    text-align: center;
+  }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  body {
+    margin: 1rem;
+  }
+  body .navbar {
+    font-family: var(--font-heading);
+    color: var(--text-secondary);
+  }
+  body .navbar .collapse .navbar-nav {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    width: 100%;
+  }
+  body .navbar .collapse .navbar-nav .nav-item a {
+    font-size: 1.5rem;
+    color: var(--bg-lighter);
+  }
+  body .navbar .navbar-toggler {
+    background-color: var(--bg-lighter);
+  }
+  body .navbar-fixed-top.scrolled {
+    background-color: var(--bg-dark) !important;
+    -webkit-transition: background-color .3s linear;
+    transition: background-color .3s linear;
+  }
+  body .aboutSection {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  body .aboutSection .abouHeading .welcome h1 {
+    text-align: center;
+  }
+  body .aboutSection .aboutme h2, body .aboutSection .aboutme h3, body .aboutSection .aboutme h4, body .aboutSection .aboutme h5, body .aboutSection .aboutme h6, body .aboutSection .aboutme p {
+    font-size: 1rem;
+  }
+  body .aboutSection .aboutme .aboutBtn {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  body .aboutSection .aboutme .aboutBtn .btn {
+    margin-bottom: .5rem;
+  }
+  body .skillSection .col-5 {
+    max-width: none;
+  }
+  body .skillSection .col-5 .skillOrbit {
+    position: relative;
+    overflow: hidden;
+  }
+  body .skillSection .col-5 .skillOrbit .orbit {
+    min-height: 100vh;
+  }
+  body .skillSection .row {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  body .skillSection .row .col-7 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    max-width: 100%;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+  body .skillSection .row .col-7 .skillList {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding: 1rem 1rem 1rem 1rem;
+  }
+  body .skillSection .row .col-7 .skillList .row {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  body .projectSection {
+    margin: 0rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+  }
+  body .projectSection .card-deck {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    -webkit-box-align: stretch;
+        -ms-flex-align: stretch;
+            align-items: stretch;
+  }
+  body .projectSection .card-deck .card {
+    margin-bottom: 1rem;
+  }
+  body .contactSection {
+    margin: 0 2rem;
+  }
+  body .contactSection .socialConnectColumn {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    position: relative;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  body .contactSection .socialConnectColumn .socialConnect .socialBtns {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  body .contactSection .socialConnectColumn .socialConnect .socialBtns a {
+    margin-right: 1rem;
+  }
+  body .contactSection .socialConnectColumn .peekimage {
+    position: absolute;
+    left: 4rem;
+    top: 0rem;
+  }
+  body .contactSection .socialConnectColumn .peekimage img {
+    width: 300px;
+  }
+  body .contactSection .socialConnectColumn .contactSection {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  body .contactSection .socialConnectColumn .contactSection .socialConnectColumn {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  body .contactSection .socialConnectColumn .contactSection .socialConnectColumn .socialConnect .socialBtns {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .footerSection h5 {
+    text-align: center;
+  }
+}
+
+@media only screen and (min-width: 1366px) {
+  body {
+    margin: 1rem;
+  }
+  body .navbar {
+    font-family: var(--font-heading);
+    color: var(--text-secondary);
+  }
+  body .navbar .collapse .navbar-nav {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    width: 100%;
+  }
+  body .navbar .collapse .navbar-nav .nav-item a {
+    font-size: 1.5rem;
+    color: var(--bg-lighter);
+  }
+  body .navbar .navbar-toggler {
+    background-color: var(--bg-lighter);
+  }
+  body .navbar-fixed-top.scrolled {
+    background-color: var(--bg-dark) !important;
+    -webkit-transition: background-color .3s linear;
+    transition: background-color .3s linear;
+  }
+  body .aboutSection {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  body .aboutSection .abouHeading .welcome h1 {
+    text-align: center;
+  }
+  body .aboutSection .aboutme h2, body .aboutSection .aboutme h3, body .aboutSection .aboutme h4, body .aboutSection .aboutme h5, body .aboutSection .aboutme h6, body .aboutSection .aboutme p {
+    font-size: 1rem;
+  }
+  body .aboutSection .aboutme .aboutBtn {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  body .aboutSection .aboutme .aboutBtn .btn {
+    margin-bottom: .5rem;
+  }
+  body .skillSection .col-5 {
+    max-width: none;
+  }
+  body .skillSection .col-5 .skillOrbit {
+    position: relative;
+    overflow: hidden;
+  }
+  body .skillSection .col-5 .skillOrbit .orbit {
+    min-height: 50vh;
+  }
+  body .skillSection .row {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  body .skillSection .row .col-7 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    max-width: 100%;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+  body .skillSection .row .col-7 .skillList {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding: 1rem 1rem 1rem 1rem;
+    position: relative;
+  }
+  body .skillSection .row .col-7 .skillList .row {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  body .skillSection .row .col-7 .skillList img {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+  }
+  body .projectSection {
+    margin-bottom: 5rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+  }
+  body .projectSection .card-deck {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    -webkit-box-align: stretch;
+        -ms-flex-align: stretch;
+            align-items: stretch;
+  }
+  body .projectSection .card-deck .card {
+    margin-bottom: 1rem;
+  }
+  body .contactSection {
+    margin: 2rem;
+  }
+  body .contactSection .socialConnectColumn {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    position: relative;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  body .contactSection .socialConnectColumn .socialConnect .socialBtns {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  body .contactSection .socialConnectColumn .socialConnect .socialBtns a {
+    margin-right: 1rem;
+  }
+  body .contactSection .socialConnectColumn .peekimage {
+    position: absolute;
+    left: 7.2rem;
+    top: 0rem;
+  }
+  body .contactSection .socialConnectColumn .peekimage img {
+    width: 300px;
+  }
+  body .contactSection .socialConnectColumn .contactSection {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  body .contactSection .socialConnectColumn .contactSection .socialConnectColumn {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  body .contactSection .socialConnectColumn .contactSection .socialConnectColumn .socialConnect .socialBtns {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .footerSection h5 {
+    text-align: center;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  body {
+    margin: 1rem;
+  }
+  body .navbar {
+    font-family: var(--font-heading);
+    color: var(--text-secondary);
+  }
+  body .navbar .collapse .navbar-nav {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    width: 100%;
+  }
+  body .navbar .collapse .navbar-nav .nav-item a {
+    font-size: 1.5rem;
+    color: var(--bg-lighter);
+  }
+  body .navbar .navbar-toggler {
+    background-color: var(--bg-lighter);
+  }
+  body .navbar-fixed-top.scrolled {
+    background-color: var(--bg-dark) !important;
+    -webkit-transition: background-color .3s linear;
+    transition: background-color .3s linear;
+  }
+  body .aboutSection {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  body .aboutSection .abouHeading .welcome h1 {
+    text-align: center;
+  }
+  body .aboutSection .aboutme h2, body .aboutSection .aboutme h3, body .aboutSection .aboutme h4, body .aboutSection .aboutme h5, body .aboutSection .aboutme h6, body .aboutSection .aboutme p {
+    font-size: 1rem;
+  }
+  body .aboutSection .aboutme .aboutBtn {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  body .aboutSection .aboutme .aboutBtn .btn {
+    margin-bottom: .5rem;
+  }
+  body .skillSection {
+    margin-top: 2rem;
+  }
+  body .skillSection .col-5 {
+    max-width: none;
+  }
+  body .skillSection .col-5 .skillOrbit {
+    position: relative;
+    overflow: hidden;
+  }
+  body .skillSection .col-5 .skillOrbit .orbit {
+    min-height: 100vh;
+  }
+  body .skillSection .row {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  body .skillSection .row .col-7 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    max-width: 100%;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+  body .skillSection .row .col-7 .skillList {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding: 1rem 1rem 1rem 1rem;
+  }
+  body .skillSection .row .col-7 .skillList .row {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  body .projectSection {
+    margin: 0rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+  }
+  body .projectSection .card-deck {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    -webkit-box-align: stretch;
+        -ms-flex-align: stretch;
+            align-items: stretch;
+  }
+  body .projectSection .card-deck .card {
+    margin-bottom: 1rem;
+  }
+  body .contactSection {
+    margin: 0 2rem;
+  }
+  body .contactSection .socialConnectColumn {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    position: relative;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  body .contactSection .socialConnectColumn .socialConnect .socialBtns {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  body .contactSection .socialConnectColumn .socialConnect .socialBtns a {
+    margin-right: 1rem;
+  }
+  body .contactSection .socialConnectColumn .peekimage {
+    position: absolute;
+    left: 9rem;
+    top: 0rem;
+  }
+  body .contactSection .socialConnectColumn .peekimage img {
+    width: 300px;
+  }
+  body .contactSection .socialConnectColumn .contactSection {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  body .contactSection .socialConnectColumn .contactSection .socialConnectColumn {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  body .contactSection .socialConnectColumn .contactSection .socialConnectColumn .socialConnect .socialBtns {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .footerSection h5 {
+    text-align: center;
+  }
+}
+
+@media only screen and (min-width: 1920px) {
+  body {
+    margin: 5rem;
+  }
+  body .navbar {
+    font-family: var(--font-heading);
+    color: var(--text-secondary);
+  }
+  body .navbar .collapse .navbar-nav {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    width: 100%;
+  }
+  body .navbar .collapse .navbar-nav .nav-item a {
+    font-size: 1.5rem;
+    color: var(--bg-lighter);
+  }
+  body .navbar .navbar-toggler {
+    background-color: var(--bg-lighter);
+  }
+  body .navbar-fixed-top.scrolled {
+    background-color: var(--bg-dark) !important;
+    -webkit-transition: background-color .3s linear;
+    transition: background-color .3s linear;
+  }
+  body .aboutSection {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: stretch;
+        -ms-flex-align: stretch;
+            align-items: stretch;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  body .aboutSection .abouHeading .welcome h1 {
+    text-align: center;
+  }
+  body .aboutSection .aboutme h2, body .aboutSection .aboutme h3, body .aboutSection .aboutme h4, body .aboutSection .aboutme h5, body .aboutSection .aboutme h6, body .aboutSection .aboutme p {
+    font-size: 1.5rem;
+  }
+  body .aboutSection .aboutme .aboutBtn {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  body .aboutSection .aboutme .aboutBtn .btn {
+    margin-bottom: .5rem;
+  }
+  body .skillSection .col-5 {
+    max-width: none;
+  }
+  body .skillSection .col-5 .skillOrbit {
+    position: relative;
+    overflow: hidden;
+  }
+  body .skillSection .col-5 .skillOrbit .orbit {
+    min-height: 80vh;
+  }
+  body .skillSection .col-5 .skillOrbit .orbit-icon {
+    font-size: 1em;
+    border-radius: 50%;
+  }
+  body .skillSection .col-5 .skillOrbit .orbit-wrap {
+    height: 1.5rem;
+    font-size: 1.5rem;
+  }
+  body .skillSection .row {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  body .skillSection .row .col-7 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    max-width: 100%;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+  body .skillSection .row .col-7 .skillList {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding: 1rem;
+  }
+  body .skillSection .row .col-7 .skillList h1 {
+    font-size: 2.5rem;
+  }
+  body .skillSection .row .col-7 .skillList p {
+    font-size: 1.5rem;
+  }
+  body .skillSection .row .col-7 .skillList .row {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  body .projectSection {
+    margin: 0rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+  }
+  body .projectSection .card-deck {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    -webkit-box-align: stretch;
+        -ms-flex-align: stretch;
+            align-items: stretch;
+  }
+  body .projectSection .card-deck .card {
+    margin-bottom: 1rem;
+  }
+  body .contactSection {
+    margin: 5rem 2rem;
+  }
+  body .contactSection .socialConnectColumn {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    position: relative;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  body .contactSection .socialConnectColumn .socialConnect .socialBtns {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  body .contactSection .socialConnectColumn .socialConnect .socialBtns a {
+    margin-right: 1rem;
+  }
+  body .contactSection .socialConnectColumn .peekimage {
+    position: absolute;
+    left: 16rem;
+    top: 0rem;
+  }
+  body .contactSection .socialConnectColumn .peekimage img {
+    width: 300px;
+  }
+  body .contactSection .socialConnectColumn .contactSection {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  body .contactSection .socialConnectColumn .contactSection .socialConnectColumn {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  body .contactSection .socialConnectColumn .contactSection .socialConnectColumn .socialConnect .socialBtns {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  body .contactSection .socialConnectColumn .contactSection .socialConnectColumn .contactDetails {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .footerSection h5 {
+    text-align: center;
+  }
 }
 /*# sourceMappingURL=style.css.map */

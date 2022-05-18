@@ -14,6 +14,24 @@
 	--font-body: 'Gruppo', cursive;
 }
 
+[data-theme="dark"] {
+	--text-primary: #EEEEEE; 
+	--text-secondary: #EEEEEE; 
+	--bg-dark: #000000; 
+	--bg-mid: #222831; 
+	--bg-light: #393E46; 
+	--bg-lighter: #EEEEEE; 
+}
+
+.clay-theme{
+	--text-primary: #171717; 
+	--text-secondary: #EEEEEE; 
+	--bg-dark: #171717; 
+	--bg-mid: #00ADB5; 
+	--bg-light: #393E46; 
+	--bg-lighter: #EEEEEE; 
+}
+
 
 @mixin bodyStyle {
 	font-family: var(--font-body);
@@ -40,29 +58,58 @@ body{
 	margin: 0 7rem;
 	background-color: var(--bg-dark);
 	
+	.navbar{
+		@include headingStyle;
+		.collapse{
+			.navbar-nav{
+				flex: 1;
+				justify-content: space-around;
+				width: 100%;
+				.nav-item{
+					a{
+						font-size: 2rem;
+						color: var(--bg-lighter);
+		
+					}
+				}
+			}
+		}
+		
+		.themeSwitcher{
+			input{    margin-left: 3rem;}
+			.toggle-button {
+				-webkit-appearance: none;
+				outline: none;
+				width: 50px;
+				height: 50px;
+				border-radius: 30px;
+				position: relative;
+				transition: 0.4s;
+				background: url("https://raw.githubusercontent.com/RuchiVS/image-upload/main/moon.png")
+				no-repeat center var(--bg-light);
+				background-size: 30px;
+				cursor: pointer;
+			  }
+			  .toggle-button:checked {
+				background: url("https://raw.githubusercontent.com/RuchiVS/image-upload/main/sun.png")
+				  no-repeat center var(--bg-light);
+				background-size: 30px;
+			  }
+		}
 
-	.navbar {
-		display: block;
-		margin: 3rem 0rem;
-		font-size: 1.7rem;
-		padding: 1rem 0rem;
+		
 	}
-	
-	.navbar ul{
-		display: flex;
-		align-items: center;
-		justify-content: space-between;
-	}
-	.navbar ul li{
-		list-style: none;
-	}
-	.navbar ul li a{
-		@include resetATags;
-	}
+
+
+	.navbar-fixed-top.scrolled {
+		background-color: var(--bg-dark) !important;
+		transition: background-color .3s linear;
+	  }
+
 	.aboutSection{
 		display: flex;
 		gap: 3rem;
-		margin: 6rem 0rem;
+		margin: 2rem 0rem 0rem 0rem;
 
 		.abouHeading{
 
@@ -85,7 +132,7 @@ body{
 					text-align: center;
 					transition: transform 0.6s;
 					transform-style: preserve-3d;
-					box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+					// box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
 				  }
 				  
 				  .flip-card:hover .flip-card-inner {
@@ -101,16 +148,17 @@ body{
 				  }
 				  
 				  .flip-card-front {
-					background-color: #bbb;
+					background-color: var(--bg-dark);
 					color: black;
 				  }
 				  
 				  .flip-card-back {
-					background-color: #2980b9;
-					color: white;
 					transform: rotateY(180deg);
-					filter: grayscale(100%);
-				  }
+					filter: grayscale(80%);
+					img{
+						object-fit: contain;
+					}
+				}
 
 			}
 			
@@ -184,7 +232,7 @@ body{
 	
 	//-- Skill section --// 
 .skillSection{
-	margin: 6rem 0rem;
+	
 	text-transform: uppercase;
 	.skillOrbitSection{
 		height: fit-content;
@@ -209,8 +257,8 @@ body{
 		  line-height: $orbitItemSize;
 		  font-size: 1.5em;
 		  border-radius: 50%;
-		  background: #ccc;
-		  color: #fff;
+		  background: var(--bg-light);
+		  color: var(--text-secondary);
 		  text-align: center;
 		  display: block;
 		}
@@ -409,17 +457,228 @@ body{
 
 
 
+	//-- Project section --// 
+	.projectSection{
+		
+		display: flex;
+		flex-direction: column;
+		align-items: stretch;
+		h1{
+			@include headingStyle;
+			text-align: center;
+			margin: 5rem 0rem;
+		}
+	
+	.card-deck{
+		@include bodyStyle;
+		flex:1;
+	.card{
+		background-color: var(--bg-light);
+		border-radius: 0rem 0rem 2rem 2rem;;
+		img {
+			width: 100%;
+			object-fit: cover;
+			object-position: top;
+			height: 270px;
+			transition: 2s all ease;
+		
+			&:hover {
+			  object-position: bottom;
+			}
+		  }
+		  .card-body{
+			  color: var(--text-secondary);
+			  padding: 1.25rem 1.25rem 0rem 1.25rem;
+			  p{
+				  .techStack{
+					  background-color: var(--bg-dark);
+					  border-radius: 1rem;
+					  padding: .4rem;
+					  margin-right: .5rem;
+				  }
+			  }
+			  .projectLinks{
+				  display: flex;
+				  justify-content: space-between;
+				  align-items: flex-start;
+				  p{
+					  a{
+						@include resetATags;
+						  i{
+							  font-size: 2rem;
+							  margin-right: 1rem;
+							  margin-top: .5rem;
+							}
+						}
+				  }
+				
+				  .btn-details{
+					color: var(--text-secondary);
+					background-color: var(--bg-dark);
+					border: none;
+					border-radius: 1rem;
+					padding: .6rem;
+				  }
+			  }
+		  }
+	}
+
+	}
+	.seeMoreWorks{
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	.btn{
+		@include bodyStyle();
+		
+		margin-top: 2rem;
+		width: 20rem;
+		color: var(--bg-lighter);
+		border: none;
+		font-size: 1.5rem;
+		background-color: var(--bg-mid);
+		border-radius: 1rem;
+		transition: .2s ease-in-out;
+
+		
+	}
+	.btn:hover{
+		background-color: var(--bg-lighter);
+		color: var(--bg-dark)
+	}
+ 	}
+	}
 
 
+	// Contact Section
 
 
+	.contactSection{
+		@include bodyStyle;
+		display: flex;
+		margin: 5rem 0;
+		
+		.socialConnectColumn{
+			align-items: center;
+			.socialConnect{
+				.socialBtns{
+					display: flex;
+					flex-direction: column;
+					
+					i{
+						font-size: 3rem;
+						color: var(--text-secondary);
+						margin: 1rem 0;
+						transition: 2s ease-in-out;
+					}
+					i:hover{
+						color: var(--text-primary);
+					}
+				}
+			}
+			.col-3{
+				max-width: 24.2%;
+				
+			}
+
+			.contactDetails{
+				border: .5rem dashed var(--bg-light);
+				border-radius: 2rem;
+				background-color: var(--bg-mid);
+				padding: 5rem;
+				color: var(--bg-lighter);
+				h1{
+					@include headingStyle;
+					text-align: center;
+				}
+				h3{
+					span{
+						a{
+							
+							color: var(--bg-lighter);
+						}
+					}
+				}
+				form{
+					.row{
+						margin: 1rem 0;
+						.form-control{
+							background-color: var(--bg-light);
+							border: none;
+							color: var(--text-secondary);
+							
+					}
+	
+					.form-control::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+						color: var(--bg-lighter);
+						opacity: 1; /* Firefox */
+					}
+					
+					.form-control:-ms-input-placeholder { /* Internet Explorer 10-11 */
+						color: var(--bg-lighter);
+					}
+					
+					.form-control::-ms-input-placeholder { /* Microsoft Edge */
+						color: var(--bg-lighter);
+					}
+				}
+				.divBtn{
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					.btn{
+						background-color: var(--bg-lighter);
+						font-size: 1.5rem;
+						width: 15rem;
+						i{
+							color: var(--bg-dark);
+						}
+						
+						
+					}
+				}
+			}
 
 
+		}
+	}
+	
+	}
+// Footer Section
 
+	.footerSection{
+		margin-bottom: 1rem;
+		h5{
+		@include bodyStyle;
+		// text-align: center;
+		color: var(--text-secondary);
+		font-size: 1.5rem;
+
+			.funFact{
+				@include headingStyle();
+				font-size: .8rem;
+				color: var(--text-primary);
+			}
+	}
+	}
 
 }
 
+//custom scroll bar
+body::-webkit-scrollbar {
+	width: .5rem;
+  }
+   
+//   body::-webkit-scrollbar-track {
+// 	background-color: var(--bg-lighter);
+//   }
+   
+  body::-webkit-scrollbar-thumb {
+	background-color: var(--bg-light);
+	border-radius: 1rem;
+  }
 
 
-	
-	
+
+
+@import "./media"
