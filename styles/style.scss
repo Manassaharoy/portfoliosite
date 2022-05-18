@@ -60,23 +60,24 @@ body{
 	
 	.navbar{
 		@include headingStyle;
+		background-color: var(--bg-dark);
 		.collapse{
 			.navbar-nav{
 				flex: 1;
 				justify-content: space-around;
 				width: 100%;
-				.nav-item{
-					a{
-						font-size: 2rem;
-						color: var(--bg-lighter);
+				// .nav-item{
+				// 	a{
+				// 		font-size: 2rem;
+				// 		color: var(--bg-lighter);
 		
-					}
-				}
+				// 	}
+				// }
 			}
 		}
 		
 		.themeSwitcher{
-			input{    margin-left: 3rem;}
+			// input{    margin-left: 3rem;}
 			.toggle-button {
 				-webkit-appearance: none;
 				outline: none;
