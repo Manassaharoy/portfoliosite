@@ -802,6 +802,18 @@ body .projectSection .seeMoreWorks .btn:hover {
   color: var(--bg-dark);
 }
 
+body .projectSection .checkOut {
+  font-family: var(--font-heading);
+  color: var(--text-secondary);
+}
+
+body .projectSection .checkOut h3 {
+  font-family: var(--font-heading);
+  color: var(--text-secondary);
+  font-size: 1rem;
+  color: var(--bg-lighter);
+}
+
 body .contactSection {
   font-family: var(--font-body);
   color: var(--text-primary);

@@ -548,6 +548,15 @@ body{
 		color: var(--bg-dark)
 	}
  	}
+	 .checkOut{
+		@include headingStyle;
+
+		 h3{
+			 @include headingStyle;
+			 font-size: 1rem;
+			 color: var(--bg-lighter);
+		}
+	 }
 	}
 
 
