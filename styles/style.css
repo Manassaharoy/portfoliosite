@@ -831,12 +831,12 @@ body .contactSection .socialConnectColumn .socialConnect .socialBtns i {
   font-size: 3rem;
   color: var(--text-secondary);
   margin: 1rem 0;
-  -webkit-transition: 2s ease-in-out;
-  transition: 2s ease-in-out;
+  -webkit-transition: .2s ease-in-out;
+  transition: .2s ease-in-out;
 }
 
 body .contactSection .socialConnectColumn .socialConnect .socialBtns i:hover {
-  color: var(--text-primary);
+  color: var(--bg-light);
 }
 
 body .contactSection .socialConnectColumn .col-3 {
@@ -849,6 +849,9 @@ body .contactSection .socialConnectColumn .contactDetails {
   background-color: var(--bg-mid);
   padding: 5rem;
   color: var(--bg-lighter);
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 body .contactSection .socialConnectColumn .contactDetails h1 {

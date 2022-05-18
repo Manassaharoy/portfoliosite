@@ -570,10 +570,10 @@ body{
 						font-size: 3rem;
 						color: var(--text-secondary);
 						margin: 1rem 0;
-						transition: 2s ease-in-out;
+						transition: .2s ease-in-out;
 					}
 					i:hover{
-						color: var(--text-primary);
+						color: var(--bg-light);
 					}
 				}
 			}
@@ -588,6 +588,7 @@ body{
 				background-color: var(--bg-mid);
 				padding: 5rem;
 				color: var(--bg-lighter);
+				justify-content: center;
 				h1{
 					@include headingStyle;
 					text-align: center;
